@@ -1,11 +1,15 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     Get Location
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+      <button ion-button padding (click)="getLocation()"> Show location</button>
   <div #map id="map" ></div>
 </ion-content>
